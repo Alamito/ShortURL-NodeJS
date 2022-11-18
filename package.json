@@ -1,0 +1,23 @@
+{
+  "name": "shorturl-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alamito/ShortURL-NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alamito/ShortURL-NodeJS/issues"
+  },
+  "homepage": "https://github.com/Alamito/ShortURL-NodeJS#readme",
+  "dependencies": {
+    "bitly": "^7.1.2"
+  }
+}
