@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Alamito/ShortURL-NodeJS#readme",
   "dependencies": {
-    "bitly": "^7.1.2"
+    "body-parser": "1.19.0",
+    "config": "3.2.3",
+    "consign": "0.1.6",
+    "express": "4.17.1",
+    "uuid": "3.3.3"
   }
 }
