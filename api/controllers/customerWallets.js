@@ -63,7 +63,7 @@ module.exports = app => {
         parentId: req.body.parentId,
         used: req.body.used,
         url: req.body.url,
-        createdAt: new Date()
+        // createdAt: new Date() // adiciona data de criação ou atualização
       };
       
       customerWalletsMock.data.splice(foundCustomerIndex, 1, newCustomer);

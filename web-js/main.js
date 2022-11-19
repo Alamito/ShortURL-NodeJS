@@ -1,6 +1,6 @@
 const boxURL = document.querySelector('#box-URL');
 const shortURL = document.querySelector('#shortURL');
-const serverURL = "http://127.0.0.1:8080/api/v1";
+const serverURL = "http://127.0.0.1:8080/api/v1/customer-wallets";
 
 submit.onclick = function () {
     let normalURL = boxURL.value;
@@ -8,29 +8,33 @@ submit.onclick = function () {
     
 }
 
-function teste() {
-    axios.put('http://127.0.0.1:8080/api/v1/customer-wallets/1', userUpdate)
-    .then(response => {
-        const data = response.data;
-        console.log(data.customerWallets.data[1])
-    })
-} 
-const userUpdate = {
-    used: "Tadala",
-    url: "valhalla"
+const updateURL = {
+    used: "true",
+    url: "aquela piranha"
 }
 
-teste();
+sendNormalURL = () => {
+    submit.onclick = () => {
+        let normalURL = boxURL.value;
+        updateURL.url = normalURL;
+        axios.put(`${serverURL}/1`, updateURL)
+    }
+}
 
 
+getShortURL = (serverURL) => {
+    axios.get(serverURL)
+        .then(response => {
+            const data = response.data.customerWallets.data[1];
+            if (data.used == 'false') {
+                console.log(data.url);
+            }
+        })
+}
 
+// setInterval(() => {
+//     getShortURL(serverURL);
+// }, 1000);
 
-
-// const sendURL = (serverURL, normalURL) => {
-//     const URL = `${serverURL}/1`;
-//     const response = axios.put(URL, {
-//         "used": "false",
-//         "url": "google.com"
-//     });
-// };
+sendNormalURL(serverURL);
 
