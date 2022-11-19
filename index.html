@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Formulário</title>
 </head>
 <body>
@@ -12,14 +13,14 @@
   <h2>Login</h2>
   <form>
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input id = "box-URL" type="text" name="" required="" value = "">
       <label>URL</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
+      <input id = "shortURL" type="text" name="" required="" value = "">
       <label>Short URL</label>
     </div>
-    <a href="#">
+    <a id = "submit" href="#">
       <span></span>
       <span></span>
       <span></span>
@@ -27,6 +28,6 @@
       Shorten URL
     </a>
 </div>
-<script src="js/main.js"></script>
+<script src="web-js/main.js"></script>
 </body>
 </html>

@@ -2,12 +2,12 @@
   "customerWallets": {
     "data": [
       {
-        "id": 1,
+        "id": "1",
         "used": "true",
         "url": ""
       },
       {
-        "id": 2,
+        "id": "2",
         "used": "true",
         "url": ""
       }
