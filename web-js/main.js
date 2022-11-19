@@ -3,14 +3,14 @@ const shortURL = document.querySelector('#shortURL');
 const serverURL = "http://127.0.0.1:8080/api/v1/customer-wallets";
 
 
-sendNormalURL = (status, url) => {
+const sendNormalURL = (status, url) => {
     const updateURL = {
         used: status,
         url: url,
     }
 
     submit.onclick = () => {
-        if (updateURL.used === 'false') {
+        if (updateURL.used == 'false') {
             let normalURL = boxURL.value;
             updateURL.url = normalURL;
         }
@@ -18,7 +18,7 @@ sendNormalURL = (status, url) => {
     }
 }
 
-updateStatus = (status, url) => {
+const updateStatus = (status, url) => {
     const updateURL = {
         used: status,
         url: url,
@@ -27,7 +27,7 @@ updateStatus = (status, url) => {
     axios.put(`${serverURL}/2`, updateURL)
 }
 
-getShortURL = (serverURL) => {
+const getShortURL = (serverURL) => {
     axios.get(serverURL)
         .then(response => {
             const data = response.data.customerWallets.data[1];
@@ -36,8 +36,8 @@ getShortURL = (serverURL) => {
                 return data.url;
             }
         })
-        .then((data) => {
-            updateStatus('true', data)
+        .then((url) => {
+            updateStatus('true', url)
         })
 }
 
