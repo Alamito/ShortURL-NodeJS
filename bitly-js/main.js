@@ -57,17 +57,25 @@ const updateStatus = (status, url) => {
 */
 const doShortURL = (normalURL) => {
 
-    const promiseCallback = async (resolve) => { 
+    const promiseCallback = async (resolve, reject) => { 
         bitly.shorten(normalURL)
             .then(function (result) {
                 return resolve(result.link);
             })
-            .catch(function (error) {
-                console.error(error);
+            .catch(error => {
+                errorURLInvalid(error);
             });
     }
     
     return new Promise(promiseCallback);
+}
+
+/*
+    - Trata erro de URL invalida
+*/
+const errorURLInvalid = (error) => {
+    sendShortURL('false', error.description);
+    updateStatus('true');
 }
 
 /*
