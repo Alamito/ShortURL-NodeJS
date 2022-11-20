@@ -75,7 +75,7 @@ const doShortURL = (normalURL) => {
 */
 const errorURLInvalid = (error) => {
     sendShortURL('false', error.description);
-    updateStatus('true');
+    updateStatus('true', "");
 }
 
 /*
