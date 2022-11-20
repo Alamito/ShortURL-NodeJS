@@ -4,6 +4,9 @@ const bitly = new BitlyClient('e1b4ed361ecab82cb73a3fab203d7a966d8401a1', {});
 
 const serverURL = "http://127.0.0.1:8080/api/v1/customer-wallets";
 
+/*
+    - Envia a URL encurtada para a API na posição de ID 2
+*/
 const sendShortURL = (status, url) => {
     const updateURL = {
         used: status,
@@ -13,6 +16,9 @@ const sendShortURL = (status, url) => {
     axios.put(`${serverURL}/2`, updateURL)
 }
 
+/*
+    - Pega a URL nao encurtada e retorna a URL encurtada
+*/
 const getNormalURL = (serverURL) => { 
 
     const promiseCallback = async (resolve) => {
@@ -34,6 +40,9 @@ const getNormalURL = (serverURL) => {
     return new Promise(promiseCallback);
 }
 
+/*
+    - Atualiza o status da URL para usada
+*/
 const updateStatus = (status, url) => {
     const updateURL = {
         used: status,
@@ -43,6 +52,9 @@ const updateStatus = (status, url) => {
     axios.put(`${serverURL}/1`, updateURL)
 }
 
+/*
+    - Encurta a URL
+*/
 const doShortURL = (normalURL) => {
 
     const promiseCallback = async (resolve) => { 
@@ -58,6 +70,9 @@ const doShortURL = (normalURL) => {
     return new Promise(promiseCallback);
 }
 
+/*
+    - A cada segundo busca na API uma URL para ser encurtada
+*/
 setInterval(() => {
     getNormalURL(serverURL)
         .then(response => {
