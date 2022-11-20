@@ -22,24 +22,13 @@ const getNormalURL = (serverURL) => {
         let data = await new Promise((resolve) => {
             const data = response.data.customerWallets.data[0];
             if (data.used == 'false') {
-                dodoShortURL(data.url)
+                doShortURL(data.url)
                     .then(response => {
                         return resolve(response)
                     })
             }
         })
         return resolve(data)
-    }
-
-    return new Promise(promiseCallback);
-}
-
-const doShortURL = (normalURL) => {
-
-    const promiseCallback = async (resolve, reject) => { 
-        await setTimeout(() => {
-            return resolve('https://bit.ly/3UkRgnO');
-        }, 500);
     }
 
     return new Promise(promiseCallback);
@@ -54,12 +43,11 @@ const updateStatus = (status, url) => {
     axios.put(`${serverURL}/1`, updateURL)
 }
 
-const dodoShortURL = (normalURL) => {
+const doShortURL = (normalURL) => {
 
     const promiseCallback = async (resolve) => { 
         bitly.shorten(normalURL)
             .then(function (result) {
-                console.log(result.link)
                 return resolve(result.link);
             })
             .catch(function (error) {
