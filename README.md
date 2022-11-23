@@ -45,9 +45,14 @@ git clone https://github.com/Alamito/ShortURL-NodeJS.git
 # entrar no diretório do programa
 cd "ShortURL-NodeJS"
 
-# instalação dos módulos do Node
-npm i
+# entrar no diretório do back-end
+cd "bitly-js"
 
+# abrir o arquivo
+main.js
+```
+Insira a API Key de sua conta no Bitly no escopo da váriavel Bitly e salve o arquivo.
+```bash
 # inicializar o servidor com nodemon
 npm start
 ```
