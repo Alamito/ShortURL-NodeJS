@@ -1,6 +1,6 @@
 const axios = require('axios');
 const { BitlyClient } = require('bitly');
-const bitly = new BitlyClient('e1b4ed361ecab82cb73a3fab203d7a966d8401a1', {});
+const bitly = new BitlyClient('-> Bitly API Key <-', {}); //bitly api key ex: a1c4ed361hcab82cb7va3fay203d7a956d8401j1
 
 const serverURL = "http://127.0.0.1:8080/api/v1/customer-wallets";
 
