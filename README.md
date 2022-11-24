@@ -50,9 +50,9 @@ cd "bitly-js"
 
 # abrir o arquivo
 main.js
-```
-Insira a API Key de sua conta no Bitly no escopo da váriavel Bitly e salve o arquivo.
-```bash
+
+# Insira a API Key de sua conta no Bitly no escopo da váriavel "Bitly" e salve o arquivo #
+
 # inicializar o servidor com nodemon
 npm start
 ```
