@@ -19,6 +19,7 @@ Projeto dedicado a implementação de um encurtador de URL utilizando a API do B
 # 🎥 Apresentação do projeto 🎥
 
 A seguir está representado visualmente o projeto em uma aplicação de encurtamento de URL do GitHub do autor:
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/102616676/203620053-9855e8d9-5401-4ee4-bc5c-a2b3dbc8926b.gif)
 
 # 🧬 Tecnologias utilizadas 🧬
