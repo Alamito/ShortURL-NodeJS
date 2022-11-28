@@ -22,6 +22,10 @@ A seguir está representado visualmente o projeto em uma aplicação de encurtam
 
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/102616676/203620053-9855e8d9-5401-4ee4-bc5c-a2b3dbc8926b.gif)
 
+### Resultados
+- URL Normal - "https://github.com/Alamito"
+- URL Short - "https://bit.ly/3tZLE72"
+
 # 🧬 Tecnologias utilizadas 🧬
 
 - HTML5;
