@@ -1,5 +1,5 @@
 # 🔗 ShortURL 🔗
-[![NPM](https://img.shields.io/github/license/Alamito/ShortURL-NodeJS)](https://github.com/Alamito/ShortURL-NodeJS/blob/main/LICENCE)
+[![NPM](https://img.shields.io/github/license/Alamito/ShortURL-NodeJS)](https://github.com/Alamito/ShortURL-NodeJS/blob/main/LICENSE)
 
 # 📜 Sobre o projeto 📜
 
